@@ -1,2 +1,1 @@
-#!/bin/bash
-#!/bin/bashgcc $CFILE -S
+f
