@@ -1,28 +1,24 @@
 #include "main.h"
 
 /**
- * print_diagonal - This function print Diagonal line based on the value passed
- * @n:  How long the line is
- * return: nothing
+ * puts_half - prints second half of the string
+ * @str: Pointer to the second half of the string
+ *
+ *Return: nothing
  */
 
-void print_diagonal(int n)
+void puts_half(char *str)
 {
-	int i = 0, c;
+	int a;
 
-	while (i < n && n > 0)
+	for (a = 0; str[a] != '\0'; a++)
+		;
+
+	a++;
+	for (a /= 2; str[a] != '\0'; a++)
 	{
-		c = 0;
-		while (c < i)
-		{
-			_putchar(' ');
-			c++;
-		}
-
-		_putchar('\\');
-		_putchar('\n');
-		i++;
+		_putchar(str[a]);
 	}
-	if (i == 0)
-		_putchar('\n');
+
+	_putchar('\n');
 }
