@@ -1,19 +1,25 @@
 #include "main.h"
 
+
 /**
- * print_line - This function print line based on the value passed
- * @n:  How long the line is
- * return: nothing
+ * puts2 - Prints every-other character in a given string
+ * @str: Pointer to the string to ptint
+ *
+ * Return: Nothing
  */
 
-void print_line(int n)
+void puts2(char *str)
 {
-	int i = 0;
+	int n = 0;
 
-	while (i < n && n > 0)
+	while (str[n] != '\0')
 	{
-		_putchar('_');
-		i++;
+
+		if (n % 2 == 0)
+		{
+			_putchar(str[n]);
+		}
+		n++;
 	}
 	_putchar('\n');
 }
