@@ -1,38 +1,21 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
- * main - check the code
+ * *_strcpy - copies the string pointed to by src
+ * @dest: dest pointer
+ * @src: src pointer
  *
- * Return: Always 0.
+ *
+ * Return: Dest
  */
 
-int main(void)
+char *_strcpy(char *dest, char *src)
 {
-	int i;
+	int i = -1;
 
-	for (i = 1; i <= 100; i++)
-	{
-		if  (i % 5 == 0 && i % 3 == 0)
-		{
-			printf("FizzBuzz");
-		}
-		else if (i % 5 == 0)
-		{
-			printf("Buzz");
-		}
-		else if (i % 3 == 0)
-		{
-			printf("Fizz");
-		}
-		else
-		{
-			printf("%i", i);
-		}
-		if (i != 100)
-		{
-			putchar(' ');
-		}
-	}
-	printf("\n");
-	return (0);
+	do {
+		i++;
+		dest[i] = src[i];
+	} while (src[i] != '\0');
+	return (dest);
 }
