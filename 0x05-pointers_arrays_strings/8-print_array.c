@@ -1,30 +1,26 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
- * print_square - This function prints a perfect square
- * @size:  Size of the square
- * return: nothing
+ * print_array - prints the integers in an array
+ * @a: The pointer to the array
+ * @n: number of array elements
+ *
+ * Return: Nothing
  */
 
-void print_square(int size)
+void print_array(int *a, int n)
 {
-	int a, b;
+	int i;
 
-	if (size > 0)
+	i = 0;
+	for (n--; n >= 0; n--, i++)
 	{
-		for (a = 0; a < size; a++)
+		printf("%d", a[i]);
+		if (n > 0)
 		{
-			b = 0;
-			while (b < size)
-			{
-			_putchar('#');
-			b++;
-			}
-	       _putchar('\n');
+			printf(", ");
 		}
 	}
-	else
-	{
-	_putchar('\n');
-	}
+	printf("\n");
 }
