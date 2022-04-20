@@ -1,20 +1,20 @@
 #include "main.h"
 
 /**
- * print_numbers - This function print numbers
+ * _puts - Prints a given string without using standard output
+ * @str: tha string to be printed
  *
- * return: nothing
+ * Return: Nothing to the main function
  */
 
-void print_numbers(void)
+void _puts(char *str)
 {
-	int i;
+	int n = 0;
 
-	i = 48;
-	while (i < 58)
+	while (str[n])
 	{
-		_putchar(i);
-		i++;
+		_putchar(str[n]);
+		n++;
 	}
 	_putchar('\n');
 }
