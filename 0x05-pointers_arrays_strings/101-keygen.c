@@ -1,23 +1,35 @@
-#include "main.h"
-
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
 /**
- * print_number - print integer
- * @n:  integer
- *
- * Return: void
+ * main - this prints random password keys which must sum 2772
+ * Return: (0) success when executed
  */
 
-void print_number(int n)
+int main(void)
 {
-	unsigned int a;
+	char pick;
+	char comb[]
+		= "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+	int i, rand_num, sum = 2772;
 
-	a = n;
-	if (n < 0)
+	srand(time(NULL));
+	for (i = 0; sum > 200; i++)
 	{
-		_putchar(45);
-		a = -n;
+		rand_num = rand() % (sizeof(comb) - 1);
+		pick = comb[rand_num];
+		putchar(pick);
+		sum = sum - pick;
 	}
-	if (a / 10)
-		print_number(a / 10);
-	_putchar((a % 10) + '0');
+
+	if (sum > 122)
+	{
+		putchar(sum / 2);
+		putchar((sum / 2) + (sum % 2));
+	}
+	else
+		putchar(sum);
+
+	return (0);
 }
