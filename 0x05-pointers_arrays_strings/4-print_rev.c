@@ -1,22 +1,24 @@
 #include "main.h"
 
 /**
- * print_most_numbers - This function print numbers
+ * print_rev - Print Reversed string
+ * @s: The strng to be reversed
  *
- * return: nothing
+ * Return: Nothing
  */
 
-void print_most_numbers(void)
+void print_rev(char *s)
 {
-	char i = 0;
+	int counter = 0;
 
-	while (i <= 9)
+	while (s[counter])
+		counter++;
+
+	while (counter--)
 	{
-		if (i != 2 && i != 4)
-		{
-			_putchar('0' + i);
-		}
-		i++;
+		_putchar(s[counter]);
+
 	}
+
 	_putchar('\n');
 }
