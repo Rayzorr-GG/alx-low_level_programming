@@ -1,16 +1,19 @@
 #include "main.h"
 
 /**
- * mul - Multiply two integers
- * @a: first integer
- * @b: Second integer
- * Return: the result ofthe multiplication
+ * _strlen - Function that counts the lenght of a string
+ * @s: The Pointer to holds the string to be counted
+ *
+ * Return: The lenght of the given string
  */
 
-int mul(int a, int b)
+int _strlen(char *s)
 {
-	int mult;
+	int i = 0;
 
-	mult = (a * b);
-	return (mult);
+	while (s[i])
+	{
+		i++;
+	}
+	return (i);
 }
