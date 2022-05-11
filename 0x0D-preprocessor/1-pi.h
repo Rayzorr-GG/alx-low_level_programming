@@ -1,21 +1,6 @@
-#include <stdio.h>
-#include <stdlib.h>
-#define FFILE __FILE__
+1-pi.h
 
-/**
- * main - entry point
- *
- * Return: Always 0
- */
-
-int main(void)
-{
-	int i = 0;
-
-	for (i = 0; FFILE[i] != '\0'; i++)
-	{
-		putchar(FFILE[i]);
-	}
-	putchar(10);
-	return (0);
-}
+#ifndef PI_H
+#define PI_H
+#define PI 3.14159265359
+#endif
