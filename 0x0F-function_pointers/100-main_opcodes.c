@@ -1,35 +1,39 @@
-#include "function_pointers.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <stddef.h>
 
 /**
- * int_index - Searches for an integer in an array
- * @array: First  argument of the function and array
- * @size: Second argument and size of the array
- * @cmp: Third argument and pointer to a function used int the program
- * Return: Index of the element and -1 otherwise
+ * main - check the code for Holberton School students.
+ * @argc: argument count.
+ * @argv: argument vector.
+ *
+ * Return: Always 0.
  */
-
-int int_index(int *array, int size, int (*cmp)(int))
+int main(int argc, char *argv[])
 {
-	int i, counter = 0;
+	char *opc = (char *) main;
+	int i, nbytes;
 
-	if (size <= 0)
+	if (argc != 2)
 	{
-		return (-1);
+		printf("Error\n");
+		exit(1);
 	}
-	if (cmp != NULL && array != NULL)
-	{
-		for (i = 0; i < size; i++)
-		{
-			if (cmp(array[i]) != 0)
-			{
-				counter = i;
-				return (counter);
-			}
-		}
-	}
-	return (-1);
 
+	nbytes = atoi(argv[1]);
+
+	if (nbytes < 0)
+	{
+		printf("Error\n");
+		exit(2);
+	}
+
+	for (i = 0; i < nbytes; i++)
+	{
+		printf("%02x", opc[i] & 0xFF);
+		if (i != nbytes - 1)
+			printf(" ");
+	}
+
+	printf("\n");
+	return (0);
 }
